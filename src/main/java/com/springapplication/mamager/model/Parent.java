@@ -16,4 +16,24 @@ public class Parent {
     public Parent() {
     }
 
+    public Parent(int id, FamilyMember familyMember) {
+        this.id = id;
+        this.familyMember = familyMember;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public FamilyMember getFamilyMember() {
+        return familyMember;
+    }
+
+    public void setFamilyMember(FamilyMember familyMember) {
+        this.familyMember = familyMember;
+    }
 }

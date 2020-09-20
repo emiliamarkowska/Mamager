@@ -10,9 +10,6 @@ public class Role {
     @Id
     private char id;
     private String description;
-//    @OneToMany
-//    @JoinColumn(name = "role_id")
-//    private List<FamilyMember> familyMembers = new ArrayList<>();
 
     public Role() {
     }
