@@ -1,5 +1,7 @@
 package com.springapplication.mamager.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +24,11 @@ public class Family {
     }
 
     public Family(String name) {
+        this.name = name;
+    }
+
+    public Family(int id, String name){
+        this.id = id;
         this.name = name;
     }
 
