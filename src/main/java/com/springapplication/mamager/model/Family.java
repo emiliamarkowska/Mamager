@@ -15,8 +15,7 @@ public class Family {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
-    @OneToMany
-    @JoinColumn(name = "family_id")
+    @OneToMany(cascade=CascadeType.ALL, mappedBy = "family", fetch = FetchType.LAZY)
     private List<FamilyMember> familyMembers = new ArrayList<>();
 
 
@@ -32,6 +31,11 @@ public class Family {
         this.name = name;
     }
 
+    public Family(String name, List<FamilyMember> familyMembers) {
+        this.name = name;
+        this.familyMembers = familyMembers;
+    }
+
     public int getId() {
         return id;
     }
@@ -43,6 +47,15 @@ public class Family {
     public void setName(String name) {
         this.name = name;
     }
+
+    public List<FamilyMember> getFamilyMembers() {
+        return familyMembers;
+    }
+
+    public void setFamilyMembers(List<FamilyMember> familyMembers) {
+        this.familyMembers = familyMembers;
+    }
+
 
     @Override
     public String toString() {

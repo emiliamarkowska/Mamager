@@ -1,7 +1,6 @@
 package com.springapplication.mamager.controllers;
 
 import com.springapplication.mamager.model.Family;
-import com.springapplication.mamager.model.Person;
 import com.springapplication.mamager.services.FamilyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
