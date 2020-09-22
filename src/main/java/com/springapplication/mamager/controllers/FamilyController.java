@@ -19,7 +19,8 @@ public class FamilyController {
 
     @GetMapping("/get-all-families")
     @ResponseBody
-    public List<Family> getAllPeople(){
+    @CrossOrigin
+    public List<Family> getAllFamilies(){
         return familyService.selectAllFamilies();
     }
 
